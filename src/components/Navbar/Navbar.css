@@ -1,43 +1,44 @@
+/* La navbar dans son ensemble */
 .NavbarItems {
-    /* background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73,63,252,1) 100%); */
-    /* background: linear-gradient(90deg, rgb(7, 241, 143) 0%, rgba(6, 212, 116, 0.911) 100%); */
-    background: linear-gradient(90deg, rgba(40,223,153,1) 0%, rgba(153,243,189,1) 100%);
+    background: transparent;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 22px;
 }
+/* Le logo qui va changer 🚨 */
 .navbar-logo {
-    color: #ffff;
-    font-weight: bold !important;
+    color: #28df99;
     justify-self: start;
     margin-left: 20px;
     cursor : pointer;    
 }
+/* L'icone en plus du logo qui va disparaitre ou switch*/
 /* .fa-react {
     margin-left: 0.8rem;
     font-size: 1.8rem;
 } */
+
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 12px;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 14px;
     list-style: none;
-    /* text-align: center; */
+    text-align: center;
     width: 70vw;
     justify-content: end;
     margin-right: 2rem;
+
 }
 .nav-links {
-    color: #4A4A4A;
+    color: #222f32;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-}
+    padding: 12px 32px;
+} 
 .nav-links:hover {
-    background-color: #99f3bd;
-    font-weight: bold;
-    border-radius: 4px;
+    background-color: #28df99;
+    border-radius: 40px;
     transition: all 0.2s ease-out;
 }
 .fa-bars {
@@ -50,10 +51,13 @@
     display: none;
 }
 
+/* --- La navbar en version mobile/responsive --- */
 @media screen and (max-width: 960px) {
+    /* 1 - La position des items dans leurs ensemble */
     .NavbarItems {
         position: relative;
     }
+    /* 2 - Lorsqu'un user clique sur le hamburger / affichage du menu items */
     .nav-menu {
         display: flex;
         flex-direction: column;
@@ -64,49 +68,48 @@
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
-
-        color: #4A4A4A;
-        border: 1px solid #4A4A4A;
-        padding: 8px 24px;
-        border-radius: 50px;
-        font-weight: lighter;
-        transition: opacity 0.3s ease;
+        padding: 12px 32px;
     }
+    /* 3 - Présentation des items */
     .nav-menu.active {
-        background: #ffffff;
+        background-color: transparent;
         color : black;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 1;
     }
+    /* 4 - Comment sont présenter les links des items / espacements ... */
     .nav-links {
         text-align: center;
         padding: 2rem;
         width: 100%;
         display: table;
     }
+    /* 5 -  Au passage de la sourie */
     .nav-links:hover {
-        background-color: #99f3bd;
-        border-radius: 0;
+        background-color: #28df99;
+        border-radius: 50px;
     }
+    /* 6 - Le logo qui va changer */
     .navbar-logo {
         position: absolute;
         top: 0;
         left: 0;
         transform: translate(25%, 50%);
     }
+    /* 7 - Un icon */
     .menu-icons {
         display: block;
         position: absolute;
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        font-size: 1.8rem;
+        font-size: 2rem;
         cursor: pointer;
     }
+    /* 8 - Un icon au clic */
     .fa-times {
-        color: #ffff;
         font-size: 2rem;
     }
     .nav-links-mobile {
@@ -116,14 +119,14 @@
         margin: 2rem auto;
         border-radius: 4px;
         width: 80%;
-        background: #4ad9e4;
+        background: #28df99;
         text-decoration: none;
         color: #ffff;
         font-size: 1.6rem;
     }
+    /* 9 - Passage de la souris */
     .nav-links-mobile:hover {
         background: #28df99;
-        color: #ffffff;
         transition: 250ms;
     }
 
