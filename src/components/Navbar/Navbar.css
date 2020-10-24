@@ -1,4 +1,4 @@
-/* La navbar dans son ensemble */
+/* 1- La navbar dans son ensemble */
 .NavbarItems {
     background: transparent;
     height: 100px;
@@ -7,19 +7,19 @@
     align-items: center;
     font-size: 22px;
 }
-/* Le logo qui va changer 🚨 */
+/* 2 - Le logo qui va changer 🚨 */
 .navbar-logo {
     color: #28df99;
     justify-self: start;
     margin-left: 20px;
     cursor : pointer;    
 }
-/* L'icone en plus du logo qui va disparaitre ou switch*/
+/* 3 - L'icone en plus du logo qui va disparaitre ou switch*/
 /* .fa-react {
     margin-left: 0.8rem;
     font-size: 1.8rem;
 } */
-
+/* 4 - L'ensemble de tous les items qui composent ma navbar */
 .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -31,11 +31,13 @@
     margin-right: 2rem;
 
 }
+/* 5 - Un item / bouton */
 .nav-links {
     color: #222f32;
     text-decoration: none;
     padding: 12px 32px;
 } 
+/* 6 - Au passage de la souris */
 .nav-links:hover {
     background-color: #28df99;
     border-radius: 40px;
@@ -73,7 +75,7 @@
     /* 3 - Présentation des items */
     .nav-menu.active {
         background-color: transparent;
-        color : black;
+        color : #040504;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -86,7 +88,7 @@
         width: 100%;
         display: table;
     }
-    /* 5 -  Au passage de la sourie */
+    /* 5 -  Au passage de la souris */
     .nav-links:hover {
         background-color: #28df99;
         border-radius: 50px;
@@ -112,21 +114,22 @@
     .fa-times {
         font-size: 2rem;
     }
+    /* 9 - "Me connecter" */
     .nav-links-mobile {
         display: block;
         text-align: center;
         padding: 1.5rem;
         margin: 2rem auto;
-        border-radius: 4px;
+        border-radius: 40px;
         width: 80%;
         background: #28df99;
         text-decoration: none;
-        color: #ffff;
+        color: rgb(8, 8, 8);
         font-size: 1.6rem;
     }
-    /* 9 - Passage de la souris */
+    /* 10 - "Me connecter" Passage de la souris */
     .nav-links-mobile:hover {
-        background: #28df99;
+        background: #f10a99;
         transition: 250ms;
     }
 
