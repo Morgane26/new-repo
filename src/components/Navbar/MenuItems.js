@@ -1,12 +1,17 @@
 export const MenuItems = [
     {
-        title: 'Home',
+        title: 'Au menu cette semaine',
         url: '#',
         cName: 'nav-links'
     },
     {
         title: 'Chefs partenaires',
         url: '#',
+        cName: 'nav-links'
+    },
+    {
+        title: 'Nos valeurs',
+        url:'#',
         cName: 'nav-links'
     },
     {
